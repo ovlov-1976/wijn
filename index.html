@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gouden Jubileum - Myriam & Roger</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    background: radial-gradient(circle at top, #f9e79f, #d4af37 60%, #b8860b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Titel */
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.title h1 {
+    font-size: 38px;
+    margin: 0;
+}
+
+.title h2 {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.title p {
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+
+/* Menu kaart */
+.menu-container {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    max-width: 90%;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Glinsters */
+.sparkle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { transform: scale(0.5); opacity: 0.3; }
+    50% { transform: scale(1.5); opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="title">
+    <h1>Myriam & Roger</h1>
+    <h2>Gouden Jubileum</h2>
+    <p>1976 – 2026</p>
+</div>
+
+<div class="menu-container">
+    <img src="wijnen.png" alt="Menu Gouden Jubileum">
+</div>
+
+<!-- Glinster elementen -->
+<script>
+for(let i=0; i<40; i++){
+    let sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.style.top = Math.random() * 100 + "vh";
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.animationDuration = (2 + Math.random()*3) + "s";
+    document.body.appendChild(sparkle);
+}
+</script>
+
+</body>
+</html>
+
